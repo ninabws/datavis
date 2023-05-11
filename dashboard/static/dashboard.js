@@ -10,7 +10,7 @@
   const ctx = document.getElementById('myChart')
   // eslint-disable-next-line no-unused-vars
   const myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
       labels: [
         'Domingo',
@@ -24,8 +24,8 @@
       datasets: [{
         data: dt,
         lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
+        backgroundColor: ' transparent',
+        borderColor: 'purple',
         borderWidth: 4,
         pointBackgroundColor: '#007bff'
       }]

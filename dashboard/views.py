@@ -1,15 +1,16 @@
 from django.shortcuts import render
 from django.http import request
-# Create your views here.
-dt1 = [
-      4,
-      21,
-      13,
-      4,
-      18,
-      92,
-      0
-    ]
+from .models import cadastro
+from django.http import HttpResponse, HttpResponseRedirect
 
+# Create your views here.
+
+ 
 def index (request):
-    return render (request, 'index.html', {'dt1': dt1})
+  dt = []
+  values = cadastro.objects.all()
+  for v in values:
+    dt.append(v.value)
+  return render (request, 'index.html', {'dt1': dt})
+  
+  
